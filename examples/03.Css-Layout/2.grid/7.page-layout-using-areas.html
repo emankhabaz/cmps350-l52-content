@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Page Layout</title>
     <style>
+        /* box-sizing: border-box; is used to include padding 
+            and border in an element's total width and height. */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         .container {
             display: grid;
             width: 100%;
             min-height: 250px;
-            grid-template-areas:  "head head head"
-                                  "nav  main sidebar"
-                                  "nav  foot foot";
-            grid-template-rows:  min-content auto  min-content;
+            grid-template-columns: minmax(100px, auto) 1fr minmax(80px, auto);
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "head head head"
+                "nav  main sidebar"
+                "foot  foot foot";
+            grid-template-rows: min-content auto min-content;
             /* minmax(100px, auto): min width is 100px
             and maximum is enough space to fit the grid item content */
-            grid-template-columns: minmax(100px, auto) 1fr minmax(80px, auto);
             min-height: 100vh;
         }
 
-        .container > header {
+        .container>header {
             grid-area: head;
             background-color: #8ca0ff;
         }
 
-        .container > nav {
+        .container>nav {
             grid-area: nav;
             background-color: #ffa08c;
         }
 
-        .container > main {
+        .container>main {
             grid-area: main;
             background-color: #ffff64;
         }
 
-        .container > footer {
+        .container>footer {
             grid-area: foot;
             background-color: #8cffa0;
         }
 
-        .container > aside {
+        .container>aside {
             grid-area: sidebar;
             background-color: darkorange;
         }
     </style>
 </head>
+
 <body>
     <section class="container">
         <header>Header</header>
@@ -53,4 +64,5 @@
         <aside>Side bar</aside>
     </section>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Deconstructed pancake</title>
@@ -13,7 +14,11 @@
 
         .box {
             /*  No stretching: */
-            flex: 0 1 200px;
+            /* flex grow, flex shrink, flex basis 
+            flex-grow means how much the item will grow relative to the rest of the items in the container.
+            flex-shrink means how much the item will shrink relative to the rest of the items in the container.
+            flex-basis is the initial size of the item before the remaining space is distributed. */
+            flex: 1 1 200px;
             /*  Stretching: */
             /* flex: 1 1 200px; */
             margin: 5px;
@@ -25,16 +30,18 @@
         }
     </style>
 </head>
+
 <body>
-<p>
-    Deconstructed pancake:
-    Create a layout that stretches to fit the space,
-    and snaps to the next line at a minimum size.
-</p>
-<div class="container">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-</div>
+    <p>
+        Deconstructed pancake:
+        Create a layout that stretches to fit the space,
+        and snaps to the next line at a minimum size.
+    </p>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
 </body>
+
 </html>

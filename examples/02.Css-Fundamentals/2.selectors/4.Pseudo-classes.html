@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <meta charset="UTF-8" >
+    <meta charset="UTF-8">
     <style>
-        input[type="text"]:enabled {
+        input[type="text"]:focus {
             background: lightgoldenrodyellow;
         }
 
@@ -31,7 +32,8 @@
             color: black;
         }
 
-        h1:hover, a:hover {
+        h1:hover,
+        a:hover {
             background-color: yellow;
         }
 
@@ -40,21 +42,23 @@
         }
     </style>
 </head>
+
 <body>
 
-<form action="">
-    First name: <input type="text" value="Mickey"/><br/>
-    Last name: <input type="text" value="Mouse"/><br/>
-    Country: <input type="text" disabled value="Disneyland"/><br/>
+    <form action="">
+        First name: <input type="text" value="Mickey" /><br />
+        Last name: <input type="text" value="Mouse" /><br />
+        Country: <input type="text" disabled value="Disneyland" /><br />
 
-    <h1>Links</h1>
-    <p class="quote">
-        Mouse over and click the link:
-        <a href="http://www.w3schools.com">w3schools.com</a>
-    </p>
+        <h1>Links</h1>
+        <p class="quote">
+            Mouse over and click the link:
+            <a href="http://www.w3schools.com">w3schools.com</a>
+        </p>
 
-    <input type="text" id="fname" name="fname">
-</form>
+        <input type="text" id="fname" name="fname">
+    </form>
 
 </body>
+
 </html>
